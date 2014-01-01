@@ -1,9 +1,3 @@
-DROP USER 'NoProtection'@'localhost';
-DROP USER 'EscapeQuery'@'localhost';
-DROP USER 'Cookies'@'localhost';
-DROP USER 'ServerVariables'@'localhost';
-DROP USER 'sudo'@'localhost';
-
 CREATE USER 'NoProtection'@'localhost' IDENTIFIED BY 'WllIFvA9YImLIb1L9XZYTEeuBfNuE8KxhS1aXdf6AEFzUCVy5HRP9PurkmSxEXk';
 CREATE USER 'EscapeQuery'@'localhost' IDENTIFIED BY '7dBAg4sORWnLqN1QzxhTDin37UM8fEDfGw5ArMCQHLGeUeqm4yZ09sTK82iQKbb';
 CREATE USER 'Cookies'@'localhost' IDENTIFIED BY 'sNg2XGgenMPH97sXlENkozd17wzutwo8MzVENrK9famH6d8yxKYgmvtTpb041ir';

@@ -1,5 +1,5 @@
 <?php
-include_once "../include.inc.php";
+include_once "include.inc.php";
 generateHeader();
 ?>
 
@@ -36,7 +36,7 @@ generateHeader();
 		offset = Date.now();
 		clock = 0;
 		interval = setInterval(updateTime, 1);
-		$.post("../processquery.php", {
+		$.post("processquery.php", {
 			level: 5,
 			name: $("#name").val(),
 		}, handleResponse
