@@ -47,9 +47,6 @@ generateHeader();
 		<li>
 			<a href="BlindBasic.php">Blind Basic</a> - As the name suggests, you will receive no feedback on this challange. 
 		</li>
-		<li>
-			More comming soon...
-		</li>
 	</span>
 </div>
 <?php

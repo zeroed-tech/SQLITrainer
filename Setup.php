@@ -1,9 +1,6 @@
 <?php
 include_once "include.inc.php";
-generateHeader();
-
-//$username = "root";
-//$password = 'QfU%@EkF&bHlPQhoPsb^na*$YpO91l$*!W&HvNKSwrS^bU0QLL';
+generateHeader(true, "Enter the username and password of an account that has permission to create users, databased and tables on your MySQL server (usually root).");
 
 if(isset($_POST["username"]) && isset($_POST["password"])){
 	$username = $_POST["username"];

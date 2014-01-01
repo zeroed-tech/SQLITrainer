@@ -1,6 +1,6 @@
 <?php
 include_once "include.inc.php";
-generateHeader();
+generateHeader(true, "While you need a ' to close a string you only need a space to close a number.");
 ?>
 
 

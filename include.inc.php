@@ -3,7 +3,7 @@ error_reporting(E_ALL | E_STRICT);
 ini_set("display_errors", 1);
 date_default_timezone_set('Australia/Melbourne');
 
-function generateHeader(){
+function generateHeader($menubar = false, $hint = ""){
 	error_reporting(E_ALL);
 	?>
 	<!DOCTYPE html>
@@ -22,6 +22,45 @@ function generateHeader(){
 		</head>
 		<body>
 	<?php
+	if($menubar){
+		?>
+		<nav>
+			<ul>
+				<li><a href="index.php">Home</a></li>
+				<li><a href="Setup.php">Setup</a></li>
+				<li><a href="ScoreCard.php">Score Card</a></li>
+				<li><a href="#">Levels</a>
+					<ul>
+						
+						<li><a href="NoProtection.php">No Proction</a></li>
+						<li><a href="EscapeQuery.php">Escaped Query</a></li>
+						<li><a href="Cookies.php">Cookies</a></li>
+						<li><a href="ServerVariables.php">Server Variables</a></li>
+						<li><a href="BlindBasic.php">Blind Basic</a></li>
+					</ul>
+				</li>
+				<li><a href="#" id="hintbutton">Hint</a></li>
+			</ul>
+		</nav>
+
+		<div id="hintdiv">
+			<div id="hintbody">
+				<h2>Hint:</h2>
+				<p><?php echo $hint; ?></p>
+			</div>
+		</div>
+
+		<script type="text/javascript">
+			$("#hintdiv").hide();
+			$("#hintbutton").click(function(){
+				$("#hintdiv").show();
+			});
+			$("#hintdiv").click(function(){
+				$("#hintdiv").hide();
+			});
+		</script>
+		<?php
+	}
 }
 
 function generateFooter($showQuery = true){
@@ -96,20 +135,4 @@ function db_connect($level = 1){
 	}
 	return $con;
 }
-
-//Verifys username in doesnt exist in current database
-//Returns True if username is available
-function usernameAvailable($username, $con){
-	$stmt = $con->prepare('SELECT * FROM users WHERE username = ?');
-	if(!$stmt){
-		echo "<p class=error>Something went wrong with the database while verifying your username was available</p>\n";
-		return;
-	}
-	$stmt->bind_param('s', $username);
-	$stmt->execute();
-	$stmt->store_result();
-
-	return (mysqli_stmt_num_rows($stmt) == 0) ? True : False;
-}
-
 ?>

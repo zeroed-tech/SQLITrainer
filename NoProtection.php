@@ -1,6 +1,6 @@
 <?php
 include_once "include.inc.php";
-generateHeader();
+generateHeader(true, "Vulnerable to the most basic SQL injection attack possible.");
 ?>
 
 

@@ -1,6 +1,6 @@
 <?php
 include_once "include.inc.php";
-generateHeader();
+generateHeader(true, "The timer is there for a reason");
 ?>
 
 

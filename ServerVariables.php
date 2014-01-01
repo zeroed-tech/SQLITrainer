@@ -1,6 +1,6 @@
 <?php
 include_once "include.inc.php";
-generateHeader();
+generateHeader(true, "There are some server variables that the user can manipulate");
 if(isset($_COOKIE["SQLITraining"])){
 	setrawcookie('SQLITraining', '');
 }
@@ -8,7 +8,7 @@ if(isset($_COOKIE["SQLITraining"])){
 
 
 <div id="main">
-	<p id="challenge"><b>Challenge:</b> Dump all user account information</p>
+	<p id="challenge"><b>Challenge:</b> Verify your own post</p>
 	<p id="header">
 		<b>Source:</b>
 	</p>

@@ -1,6 +1,7 @@
 <?php
 include_once "include.inc.php";
-generateHeader();
+generateHeader(true, "People store some interesting things in cookies.");
+
 if(!isset($_COOKIE["SQLITraining"])){
 	$cookieVal = base64_encode("username=bob&password=".md5("I like apples"));
 	setrawcookie('SQLITraining', $cookieVal);
