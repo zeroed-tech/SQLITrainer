@@ -78,7 +78,7 @@ function db_connect($level = 1){
 			break;
 		}
 		case 5:{
-			$username = "BasicBlind";
+			$username = "BlindBasic";
 			$password = "QCmy9hSSIk68o0u83JN1DKqZA9aMehgiIexcB4ihnj32J7Q6QPziUKMeyvzP41K";
 			break;
 		}

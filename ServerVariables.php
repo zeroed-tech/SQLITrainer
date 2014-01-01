@@ -44,7 +44,7 @@ if(isset($_COOKIE["SQLITraining"])){
 
 	<h2>Hax0r Bl0g</h2>
 	<p>Welcome to the Hax0r Bl0g. This is an open blog so feel free to post anything that you thing other l33t hax0rs will like.</p>
-	<form id="loginform" action="auth.php" method="POST">
+	<form id="loginform" method="POST">
 		<ul>
 			<li><label for="title">Title:</label></li>
 			<li><input id="title" name="title" type="text" /></li>

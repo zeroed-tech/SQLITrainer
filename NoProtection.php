@@ -16,7 +16,7 @@ generateHeader();
 	</script>
 
 	
-	<form id="loginform" action="auth.php" method="POST">
+	<form id="loginform" method="POST">
 		<ul>
 			<li><label for="username">Username:</label></li>
 			<li><input id="username" name="username" type="text" /></li>

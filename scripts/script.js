@@ -1,5 +1,8 @@
+var clock ;
+var interval;
+var offset;
 function handleResponse(data, status){
-	if (interval) {
+	if (interval ) {
       clearInterval(interval);
     }
 	if(status == "success"){

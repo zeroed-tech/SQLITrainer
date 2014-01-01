@@ -14,7 +14,7 @@ generateHeader();
 	</script>
 
 	
-	<form id="form" action="auth.php" method="POST">
+	<form id="form" method="POST">
 		<ul>
 			<li><label for="name">Enter your friends name to add them to your contacts:</label></li>
 			<li><input id="name" name="name" type="text" /></li>
@@ -25,9 +25,6 @@ generateHeader();
 </div>
 
 <script type="text/javascript">
-	var clock ;
-	var interval;
-	var offset;
 	function updateTime(){
 		var now = Date.now();
 		var delta = now - offset;

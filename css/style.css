@@ -21,6 +21,11 @@ color: #38c;
 text-decoration: none;
 }
 
+#setupSubmit {
+	width: 100px;
+	float: right;
+}
+
 #list, h2 {
 	color: rgb(190,190,190);
 }

@@ -2,34 +2,62 @@
 include_once "include.inc.php";
 generateHeader();
 
-//Replace with post params
-$username = "root";
-$password = 'QfU%@EkF&bHlPQhoPsb^na*$YpO91l$*!W&HvNKSwrS^bU0QLL';
+//$username = "root";
+//$password = 'QfU%@EkF&bHlPQhoPsb^na*$YpO91l$*!W&HvNKSwrS^bU0QLL';
 
-$con = new mysqli("localhost", $username, $password,"SQLITraining");
-
-if(mysqli_connect_errno()){
-	echo "<h2>Something went wrong with the database connection, please try again</h2>\n";
-	return null;
-}
-
-
-$handle = fopen("setup.sql", "r");
-if($handle){
-	while(($line = fgets($handle)) !== false){
-		$result = mysqli_query($con, $line);
-		if(!$result){
-			$error = mysqli_error($con);
-			if($error == "Query was empty"){
-				continue;
-			}
-			echo "<p>".$line."</p>";
-			echo "<h2>".mysqli_error($con)."</h2>";
-		}
+if(isset($_POST["username"]) && isset($_POST["password"])){
+	$username = $_POST["username"];
+	$password = $_POST["password"];
+	$address = "localhost";
+	if(isset($_POST["address"]) && strlen($_POST["address"]) > 3){
+		$address = $_POST["address"];
 	}
-	fclose($handle);
+	echo "<p>";
+	$con = new mysqli($address, $username, $password,"SQLITraining");
+	if(mysqli_connect_errno()){
+		echo "Something went wrong with the database connection, please try again\n";
+		return null;
+	}
+	echo "</p>";
+
+	$handle = fopen("setup.sql", "r");
+	if($handle){
+		while(($line = fgets($handle)) !== false){
+			$result = mysqli_query($con, $line);
+			if(!$result){
+				$error = mysqli_error($con);
+				if($error == "Query was empty"){
+					continue;
+				}
+				echo "<p>".$line."</p>";
+				echo "<h2>".mysqli_error($con)."</h2>";
+			}
+		}
+		fclose($handle);
+		echo "<h2>Done</h2>";
+		echo "<br />";
+		echo '<a href="index.php">Home</a>';
+	}
+
+	mysqli_close($con);
+} else {
+	?>
+	
+	<div id="main">
+	<h2>Setup</h2>
+	<p>Enter credentials for your MySql database. You can optionaly enter the ip/hos tname of your server (default is localhost)</p>
+	<form action="Setup.php" method="POST">
+		<ul>
+			<li><label for="username">Username:</label></li>
+			<li><input id="username" name="username" type="text" /></li>
+			<li><label for="password">Password:</label></li>
+			<li><input id="password" name="password" type="text" /></li>
+			<li><label for="address">Address:</label></li>
+			<li><input id="address" name="address" type="text" /></li>
+		</ul>
+		<input id="setupSubmit" type="submit" value="Setup" />
+	</form>
+</div>
+	<?php
 }
-
-mysqli_close($con);
-
 ?>

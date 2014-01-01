@@ -1,18 +1,14 @@
--- Database setup:
--- User: root 
--- Password: QfU%@EkF&bHlPQhoPsb^na*$YpO91l$*!W&HvNKSwrS^bU0QLL
-
 DROP USER 'NoProtection'@'localhost';
 DROP USER 'EscapeQuery'@'localhost';
 DROP USER 'Cookies'@'localhost';
 DROP USER 'ServerVariables'@'localhost';
-DROP USER 'BasicBlind'@'localhost';
+DROP USER 'BlindBasic'@'localhost';
 
 CREATE USER 'NoProtection'@'localhost' IDENTIFIED BY 'WllIFvA9YImLIb1L9XZYTEeuBfNuE8KxhS1aXdf6AEFzUCVy5HRP9PurkmSxEXk';
 CREATE USER 'EscapeQuery'@'localhost' IDENTIFIED BY '7dBAg4sORWnLqN1QzxhTDin37UM8fEDfGw5ArMCQHLGeUeqm4yZ09sTK82iQKbb';
 CREATE USER 'Cookies'@'localhost' IDENTIFIED BY 'sNg2XGgenMPH97sXlENkozd17wzutwo8MzVENrK9famH6d8yxKYgmvtTpb041ir';
 CREATE USER 'ServerVariables'@'localhost' IDENTIFIED BY 'lbdfHjmPNPmwy20ZJ6w0a5jvUBLRBIGqesKbUVQzeUUHIbRTJ2hFFvVpG4EBLvB';
-CREATE USER 'BasicBlind'@'localhost' IDENTIFIED BY 'QCmy9hSSIk68o0u83JN1DKqZA9aMehgiIexcB4ihnj32J7Q6QPziUKMeyvzP41K';
+CREATE USER 'BlindBasic'@'localhost' IDENTIFIED BY 'QCmy9hSSIk68o0u83JN1DKqZA9aMehgiIexcB4ihnj32J7Q6QPziUKMeyvzP41K';
 
 DROP DATABASE SQLITraining;
 CREATE DATABASE SQLITraining;
@@ -39,7 +35,7 @@ INSERT INTO EscapeQuery (Username, Password, yob) VALUES ("AKA", MD5('its a pain
 INSERT INTO EscapeQuery (Username, Password, yob) VALUES ("Steve", MD5('Ya wanna see a trick'), 1992);
 INSERT INTO EscapeQuery (Username, Password, yob) VALUES ("Hacker", MD5('^never say yes to this'), 1337);
 INSERT INTO EscapeQuery (Username, Password, yob) VALUES ("Select * from users;", MD5('Drop table users;'), 1993);
-INSERT INTO EscapeQuery (Username, Password, yob) VALUES ("flag", "{Its over 9999, well almost}", 9999);
+INSERT INTO EscapeQuery (Username, Password, yob) VALUES ("flag", "{Its over 9000, well almost}", 8999);
 GRANT ALL ON SQLITraining.EscapeQuery TO 'EscapeQuery'@'localhost';
 
 CREATE TABLE Cookies (ID int AUTO_INCREMENT, Username VARCHAR(255), Password VARCHAR(255), PRIMARY KEY (id));

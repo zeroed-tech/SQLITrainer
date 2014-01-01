@@ -1,7 +1,7 @@
 <?php
 include_once "include.inc.php";
 
-$con = db_connect();
+$con = db_connect($_POST["level"]);
 switch($_POST["level"]){
 	//Level 1 - No Protection
 	case '1':{
