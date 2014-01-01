@@ -45,7 +45,7 @@ generateHeader();
 			<a href="ServerVariables.php">Server Variables</a> - Some web apps save server variables into the database but some of these can be manipulated
 		</li>
 		<li>
-			<a href="Blind/Basic.php">Basic Blind</a> - As the name suggests, you will receive no feedback on this challange. 
+			<a href="BlindBasic.php">Blind Basic</a> - As the name suggests, you will receive no feedback on this challange. 
 		</li>
 		<li>
 			More comming soon...

@@ -10,15 +10,15 @@ function generateHeader(){
 	<html>
 		<head>
 			<title>SQLi Training Tool</title>
-			<link rel="stylesheet" type="text/css" href="/SQLITraining/css/style.css">
+			<link rel="stylesheet" type="text/css" href=<?php echo "css".DIRECTORY_SEPARATOR."style.css" ?> />
 
-			<link type="text/css" rel="Stylesheet" href="/SQLITraining/css/shThemeMidnight.css"/>
-			<link type="text/css" rel="Stylesheet" href="/SQLITraining/css/shCoreMidnight.css"/>
+			<link type="text/css" rel="Stylesheet" href=<?php echo "css".DIRECTORY_SEPARATOR."shThemeMidnight.css" ?> />
+			<link type="text/css" rel="Stylesheet" href=<?php echo "css".DIRECTORY_SEPARATOR."shCoreMidnight.css" ?> />
 
-			<script src="/SQLITraining/scripts/jquery-2.0.3.min.js"></script>
-			<script src="/SQLITraining/scripts/script.js"></script>
-			<script src="/SQLITraining/scripts/shCore.js"></script>
-			<script src="/SQLITraining/scripts/shBrushPhp.js"></script>
+			<script src=<?php echo "scripts".DIRECTORY_SEPARATOR."jquery-2.0.3.min.js" ?> ></script>
+			<script src=<?php echo "scripts".DIRECTORY_SEPARATOR."script.js" ?> ></script>
+			<script src=<?php echo "scripts".DIRECTORY_SEPARATOR."shCore.js" ?> ></script>
+			<script src=<?php echo "scripts".DIRECTORY_SEPARATOR."shBrushPhp.js" ?> ></script>
 		</head>
 		<body>
 	<?php
