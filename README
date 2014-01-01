@@ -10,4 +10,14 @@ What this application WON'T do:
 -Walk you through the challenges
 
 
+Setup instructions:
+Before doing anything woy will need to have a webserver and a mysql database setup. I recommend one of the all in one solutions (xampp, lamp, mamp, wamp etc)
+Then check out the repositry (or download the zip on the right) and copy all files into your web root (usualy htdocs)
+Then just navigate to http://<youriphere>:<port>/index.php
+
+Before you start hacking away you will need to setup the database. Simpily select the "Setup" link on the index page and enter the required details.
+
+Happy hacking
+Darcpyro
+
 Syntac highlighting from https://github.com/alexgorbatchev/SyntaxHighlighter
