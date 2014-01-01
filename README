@@ -11,11 +11,12 @@ What this application WON'T do:
 
 
 Setup instructions:
-Before doing anything woy will need to have a webserver and a mysql database setup. I recommend one of the all in one solutions (xampp, lamp, mamp, wamp etc)
-Then check out the repositry (or download the zip on the right) and copy all files into your web root (usualy htdocs)
+Before doing anything you will need to have a web server and a mysql database setup. 
+I recommend one of the free, all in one solutions (xampp, lamp, mamp, wamp etc).
+Check out the repository (or download the zip on the right) and copy all files into your web root (usually htdocs)
 Then just navigate to http://<youriphere>:<port>/index.php
 
-Before you start hacking away you will need to setup the database. Simpily select the "Setup" link on the index page and enter the required details.
+Before you start hacking away you will need to setup the database. Simply select the "Setup" link on the index page and enter the required details.
 
 Happy hacking
 Darcpyro
