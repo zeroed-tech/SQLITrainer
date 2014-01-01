@@ -2,13 +2,13 @@ DROP USER 'NoProtection'@'localhost';
 DROP USER 'EscapeQuery'@'localhost';
 DROP USER 'Cookies'@'localhost';
 DROP USER 'ServerVariables'@'localhost';
-DROP USER 'BlindBasic'@'localhost';
+DROP USER 'sudo'@'localhost';
 
 CREATE USER 'NoProtection'@'localhost' IDENTIFIED BY 'WllIFvA9YImLIb1L9XZYTEeuBfNuE8KxhS1aXdf6AEFzUCVy5HRP9PurkmSxEXk';
 CREATE USER 'EscapeQuery'@'localhost' IDENTIFIED BY '7dBAg4sORWnLqN1QzxhTDin37UM8fEDfGw5ArMCQHLGeUeqm4yZ09sTK82iQKbb';
 CREATE USER 'Cookies'@'localhost' IDENTIFIED BY 'sNg2XGgenMPH97sXlENkozd17wzutwo8MzVENrK9famH6d8yxKYgmvtTpb041ir';
 CREATE USER 'ServerVariables'@'localhost' IDENTIFIED BY 'lbdfHjmPNPmwy20ZJ6w0a5jvUBLRBIGqesKbUVQzeUUHIbRTJ2hFFvVpG4EBLvB';
-CREATE USER 'BlindBasic'@'localhost' IDENTIFIED BY 'QCmy9hSSIk68o0u83JN1DKqZA9aMehgiIexcB4ihnj32J7Q6QPziUKMeyvzP41K';
+CREATE USER 'sudo'@'localhost' IDENTIFIED BY 'QCmy9hSSIk68o0u83JN1DKqZA9aMehgiIexcB4ihnj32J7Q6QPziUKMeyvzP41K';
 
 DROP DATABASE SQLITraining;
 CREATE DATABASE SQLITraining;
@@ -56,4 +56,4 @@ GRANT ALL ON SQLITraining.ServerVariables TO 'ServerVariables'@'localhost';
 
 CREATE TABLE BlindBasic(name VARCHAR(1024));
 INSERT INTO BlindBasic(name) VALUES ('Darc_Pyro');
-GRANT ALL ON SQLITraining.BlindBasic TO 'BlindBasic'@'localhost';
+GRANT ALL ON SQLITraining.BlindBasic TO 'sudo'@'localhost';
