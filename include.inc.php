@@ -37,6 +37,7 @@ function generateHeader($menubar = false, $hint = ""){
 						<li><a href="Cookies.php">Cookies</a></li>
 						<li><a href="ServerVariables.php">Server Variables</a></li>
 						<li><a href="BlindBasic.php">Blind Basic</a></li>
+						<li><a href="BasicAuth.php">Basic Auth</a></li>
 					</ul>
 				</li>
 				<li><a href="#" id="hintbutton">Hint</a></li>
@@ -119,6 +120,11 @@ function db_connect($level = 1){
 		case 5:{
 			$username = "sudo";
 			$password = "QCmy9hSSIk68o0u83JN1DKqZA9aMehgiIexcB4ihnj32J7Q6QPziUKMeyvzP41K";
+			break;
+		}
+		case 6:{
+			$username = "BasicAuth";
+			$password = "N0XG1JVj4q6KaEYg1wk3yzHnT2n9p8e94g7ajegSbkqIgaeOkAOCPpnr0iCiKOx";
 			break;
 		}
 		default:

@@ -3,6 +3,8 @@ CREATE USER 'EscapeQuery'@'localhost' IDENTIFIED BY '7dBAg4sORWnLqN1QzxhTDin37UM
 CREATE USER 'Cookies'@'localhost' IDENTIFIED BY 'sNg2XGgenMPH97sXlENkozd17wzutwo8MzVENrK9famH6d8yxKYgmvtTpb041ir';
 CREATE USER 'ServerVariables'@'localhost' IDENTIFIED BY 'lbdfHjmPNPmwy20ZJ6w0a5jvUBLRBIGqesKbUVQzeUUHIbRTJ2hFFvVpG4EBLvB';
 CREATE USER 'sudo'@'localhost' IDENTIFIED BY 'QCmy9hSSIk68o0u83JN1DKqZA9aMehgiIexcB4ihnj32J7Q6QPziUKMeyvzP41K';
+CREATE USER 'BasicAuth'@'localhost' IDENTIFIED BY 'N0XG1JVj4q6KaEYg1wk3yzHnT2n9p8e94g7ajegSbkqIgaeOkAOCPpnr0iCiKOx';
+
 
 DROP DATABASE SQLITraining;
 CREATE DATABASE SQLITraining;
@@ -51,3 +53,9 @@ GRANT ALL ON SQLITraining.ServerVariables TO 'ServerVariables'@'localhost';
 CREATE TABLE BlindBasic(name VARCHAR(1024));
 INSERT INTO BlindBasic(name) VALUES ('Darc_Pyro');
 GRANT ALL ON SQLITraining.BlindBasic TO 'sudo'@'localhost';
+
+CREATE TABLE BasicAuth(ID int AUTO_INCREMENT, Username VARCHAR(255), Password VARCHAR(255), PRIMARY KEY (id));
+INSERT INTO BasicAuth (Username, Password) VALUES ("Hacker", MD5('another crappy password'));
+GRANT ALL ON SQLITraining.BasicAuth TO 'BasicAuth'@'localhost';
+
+
